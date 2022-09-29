@@ -1,9 +1,22 @@
 .section {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	@media screen and (max-width: 1199px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
 }
 .saction--no-padding-top {
 	padding-top: 0;
+}
+
+.section--display-none {
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
 }
 .section--background-team {
 	background-color: var(--background-color-buttom);
@@ -12,12 +25,19 @@
 
 .section__title {
 	color: var(--title-text-color);
-
 	font-weight: 700;
-	font-size: 36px;
-	line-height: calc(42 / 36);
-	text-align: center;
 	letter-spacing: 0.03em;
+	text-align: center;
 
-	margin-bottom: 50px;
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		font-size: 28px;
+		line-height: 1.176;
+		margin-bottom: 30px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 36px;
+		line-height: 1.166;
+		margin-bottom: 50px;
+	}
 }

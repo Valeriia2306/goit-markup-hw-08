@@ -1,0 +1,15 @@
+@mixin mobail-use($width: 480px) {
+	@media screen and (min-width: $width) {
+		width: $width;
+	}
+}
+@mixin tablet-use($width: 768px) {
+	@media screen and (min-width: $width) {
+		width: $width;
+	}
+}
+@mixin desktop-use($width: 1200px) {
+	@media screen and (min-width: $width) {
+		width: $width;
+	}
+}
