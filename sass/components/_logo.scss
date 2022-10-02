@@ -1,23 +1,24 @@
 .logo {
-  color: var(--nav-color);
-  font-family: var(--second-font);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-  letter-spacing: 0.03em;
-}
-.footer__logo {
-  color: var(--primary-white-color);
-  margin-bottom: 20px;
+	display: inline-block;
+
+	color: var(--nav-color);
+	font-family: var(--second-font);
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.192;
+	letter-spacing: 0.03em;
 }
 
 .logo__label {
-  color: var(--accent-color);
-  font-family: var(--second-font);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-  letter-spacing: 0.03em;
+	color: var(--accent-color);
+	font-family: var(--second-font);
+}
+.footer__logo {
+	display: block;
+	color: var(--primary-white-color);
+	margin-bottom: 20px;
+	@media screen and (max-width: 1199px) {
+		text-align: center;
+	}
 }

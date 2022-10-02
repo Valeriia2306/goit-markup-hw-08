@@ -169,48 +169,45 @@ li {
 }
 
 .logo {
+  display: inline-block;
   color: var(--nav-color);
   font-family: var(--second-font);
   text-decoration: none;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.1923076923;
+  line-height: 1.192;
   letter-spacing: 0.03em;
-}
-
-.footer__logo {
-  color: var(--primary-white-color);
-  margin-bottom: 20px;
 }
 
 .logo__label {
   color: var(--accent-color);
   font-family: var(--second-font);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.1923076923;
-  letter-spacing: 0.03em;
 }
 
-.page-header__nav {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.footer__logo {
+  display: block;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1199px) {
+  .footer__logo {
+    text-align: center;
+  }
 }
 
 .menu-button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  margin-left: auto;
   padding: 0;
-  margin: 0;
   border: none;
   background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
 .menu-button .icon-cross {
@@ -226,10 +223,124 @@ li {
 }
 
 .menu-container {
-  position: absolute;
-  top: 100%;
-  left: 0;
   width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    text-align: left;
+    padding: 48px 40px;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    margin-left: 87px;
+  }
+}
+
+.networks {
+  display: none;
+}
+
+.page-header__nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+@media screen and (min-width: 768px) {
+  .nav-list {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-list__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.nav-list__link {
+  display: block;
+  color: var(--title-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.1428571429;
+  letter-spacing: 0.02em;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--timing-function);
+          transition-timing-function: var(--timing-function);
+}
+.nav-list__link:hover, .nav-list__link:focus {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .nav-list__link {
+    font-size: 14px;
+  }
+}
+
+.nav-list__link--current {
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .nav-list__link--current {
+    color: var(--accent-color);
+  }
+}
+.nav-list__link--current::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  left: 0;
+  border-radius: 2px;
+  bottom: -33px;
+  background-color: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .nav-list__link--current::after {
+    display: none;
+  }
 }
 
 .contacts {
