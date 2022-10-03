@@ -28,97 +28,47 @@
 	<body>
 		<header class="page-header">
 			<div class="container page-header__container">
-				<a class="logo" href="/index.html">
+				<a class="logo" href="./index.html">
 					<span class="logo__label">Web</span>
 					Studio
 				</a>
-				<button
-					type="button"
-					class="menu-button is-open"
-					aria-controls="menu-container"
-					aria-expanded="false"
-					data-menu-button
-				>
-					<svg width="40px" height="40px" aria-label="перемикач мобільного меню">
-						<use class="icon-menu" href="./images/burger_menu/burger-menu-sprite.svg#menu_40px"></use>
-						<use class="icon-cross" href="./images/burger_menu/burger-menu-sprite.svg#close_40px"></use>
+				<nav class="page-header__nav">
+					<ul class="nav-list">
+						<li class="nav-list__item">
+							<a href="" class="nav-list__link nav-list__link--current">Студія</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="./portfolio.html" class="nav-list__link">Портфоліо</a>
+						</li>
+						<li class="nav-list__item">
+							<a href="" class="nav-list__link">Контакти</a>
+						</li>
+					</ul>
+				</nav>
+				<ul class="contacts">
+					<li class="contacts__item">
+						<a href="mailto:info@devstudio.com" class="contacts__link">
+							<svg class="contacts__icon" width="16" height="12">
+								<use href="./images/icons.svg#envelope"></use>
+							</svg>
+							info@devstudio.com
+						</a>
+					</li>
+					<li class="contacts__item">
+						<a href="tel:+380961111111" class="contacts__link">
+							<svg class="contacts__icon" width="10" height="16">
+								<use href="./images/icons.svg#smartphone"></use>
+							</svg>
+							+38 096 111 11 11
+						</a>
+					</li>
+				</ul>
+
+				<button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+					<svg class="icon-mobile-menu" width="40px" height="40px" aria-label="перемикач мобільного меню">
+						<use href="./images/burger_menu/burger-menu-sprite.svg#menu_40px"></use>
 					</svg>
 				</button>
-				<div class="menu-container is-open" id="menu-container" data-menu>
-					<nav class="page-header__nav">
-						<ul class="nav-list">
-							<li class="nav-list__item">
-								<a href="" class="nav-list__link nav-list__link--current">Студія</a>
-							</li>
-							<li class="nav-list__item">
-								<a href="./portfolio.html" class="nav-list__link">Портфоліо</a>
-							</li>
-							<li class="nav-list__item">
-								<a href="" class="nav-list__link">Контакти</a>
-							</li>
-						</ul>
-					</nav>
-					<ul class="contacts">
-						<li class="contacts__item">
-							<a href="mailto:info@devstudio.com" class="contacts__link">
-								<svg class="contacts__icon" width="16" height="12">
-									<use href="./images/icons.svg#envelope"></use>
-								</svg>
-								info@devstudio.com
-							</a>
-						</li>
-						<li class="contacts__item">
-							<a href="tel:+380961111111" class="contacts__link">
-								<svg class="contacts__icon" width="10" height="16">
-									<use href="./images/icons.svg#smartphone"></use>
-								</svg>
-								+38 096 111 11 11
-							</a>
-						</li>
-					</ul>
-					<ul class="networks">
-						<li class="networks__item">
-							<a
-								class="networks__link networks__link--line"
-								href="https://www.instagram.com"
-								target="_blank"
-								rel="noopener nofollow noreferrer"
-							>
-								Instagram
-							</a>
-						</li>
-						<li class="networks__item">
-							<a
-								class="networks__link networks__link--line"
-								href="https://twitter.com/"
-								target="_blank"
-								rel="noopener nofollow noreferrer"
-							>
-								Twitter
-							</a>
-						</li>
-						<li class="networks__item">
-							<a
-								class="networks__link networks__link--line"
-								href="https://www.facebook.com/"
-								target="_blank"
-								rel="noopener nofollow noreferrer"
-							>
-								Facebook
-							</a>
-						</li>
-						<li class="networks__item">
-							<a
-								class="networks__link"
-								href="https://www.linkedin.com/"
-								target="_blank"
-								rel="noopener nofollow noreferrer"
-							>
-								LinkedIn
-							</a>
-						</li>
-					</ul>
-				</div>
 			</div>
 		</header>
 		<main>
@@ -687,7 +637,86 @@
 				</form>
 			</div>
 		</div>
+		<!-- Mobile menu -->
+		<div class="menu-container js-menu-container" id="mobile-menu">
+			<button class="menu-toggle js-close-menu">
+				<svg class="icon-mobile-menu" width="40px" height="40px" aria-label="перемикач мобільного меню">
+					<use href="./images/burger_menu/burger-menu-sprite.svg#close_40px"></use>
+				</svg>
+			</button>
+			<ul class="mobile-menu list">
+				<li class="mobile-menu__item">
+					<a href="" class="mobile-menu__link mobile-menu__link--current">Студія</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+				</li>
+				<li class="mobile-menu__item">
+					<a href="" class="mobile-menu__link">Контакти</a>
+				</li>
+			</ul>
+
+			<ul class="mobile-menu-contacts list">
+				<li class="mobile-menu-contacts__item">
+					<a href="tel:+380961111111" class="mobile-menu-contacts__link mobile-menu-contacts__link--blue-style">
+						+38 096 111 11 11
+					</a>
+				</li>
+				<li class="mobile-menu-contacts__item">
+					<a href="mailto:info@devstudio.com" class="mobile-menu-contacts__link">info@devstudio.com</a>
+				</li>
+			</ul>
+			<ul class="mobile-socials list">
+				<li class="mobile-socials__item">
+					<a
+						class="mobile-socials__link networks__link--line"
+						href="https://www.instagram.com"
+						target="_blank"
+						rel="noopener nofollow noreferrer"
+					>
+						Instagram
+					</a>
+				</li>
+				<li class="mobile-socials__item">
+					<a
+						class="mobile-socials__link networks__link--line"
+						href="https://twitter.com/"
+						target="_blank"
+						rel="noopener nofollow noreferrer"
+					>
+						Twitter
+					</a>
+				</li>
+				<li class="mobile-socials__item">
+					<a
+						class="mobile-socials__link networks__link--line"
+						href="https://www.facebook.com/"
+						target="_blank"
+						rel="noopener nofollow noreferrer"
+					>
+						Facebook
+					</a>
+				</li>
+				<li class="mobile-socials__item">
+					<a
+						class="mobile-socials__link"
+						href="https://www.linkedin.com/"
+						target="_blank"
+						rel="noopener nofollow noreferrer"
+					>
+						LinkedIn
+					</a>
+				</li>
+			</ul>
+		</div>
+
 		<script src="./js/modal.js"></script>
 		<script src="./js/mobail-menu.js"></script>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
