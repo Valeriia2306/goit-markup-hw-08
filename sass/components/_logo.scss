@@ -15,7 +15,7 @@
 	font-family: var(--second-font);
 }
 .footer__logo {
-	display: block;
+	display: flex;
 	color: var(--primary-white-color);
 	margin-bottom: 20px;
 	@media screen and (max-width: 1199px) {
