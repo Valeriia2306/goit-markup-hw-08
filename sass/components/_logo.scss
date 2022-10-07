@@ -15,10 +15,11 @@
 	font-family: var(--second-font);
 }
 .footer__logo {
-	display: flex;
 	color: var(--primary-white-color);
 	margin-bottom: 20px;
+
 	@media screen and (max-width: 1199px) {
 		text-align: center;
+		justify-content: center;
 	}
 }

@@ -1,27 +1,32 @@
 /*HERO-Button+Buttons Studio blue */
 .hero__button {
-  @extend %btn;
-  padding: 10px 32px;
-  min-width: 216px;
-  min-height: 50px;
+	@extend %btn;
+	padding: 10px 32px;
+	min-width: 216px;
+	min-height: 50px;
 }
 
 .register-form-btn {
-  @extend %btn;
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  padding: 10px 52px;
+	@extend %btn;
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	padding: 10px 52px;
 }
 
 .subscription__button {
-  @extend %btn;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 12px;
+	@extend %btn;
+	// position: absolute;
+	min-width: 200px;
+	min-height: 50px;
+	padding: 10px 0;
+	top: 0;
+	left: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  height: 50px;
-  min-width: 200px;
-  padding: 10px 28px;
+	@media screen and (max-width: 1199px) {
+		margin: 0 auto;
+	}
 }
