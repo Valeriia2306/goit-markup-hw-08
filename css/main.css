@@ -1106,7 +1106,7 @@ a {
 .subscription__email {
   padding: 15px 16px;
   height: 50px;
-  width: 358px;
+  width: 100%;
   display: block;
   font-size: 16px;
   line-height: 1.25;
@@ -1122,6 +1122,11 @@ a {
 .subscription__email:focus, .subscription__email:hover {
   border-color: var(--accent-color);
   outline: 1px solid var(--accent-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .subscription__email {
+    width: 358px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscription__email {
