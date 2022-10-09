@@ -509,6 +509,7 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 8px;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.02em;
@@ -1191,16 +1192,10 @@ a {
             transform: translate(-50%, -50%) scale(1);
   }
 }
-@media screen and (max-width: 1199px) {
-  .modal {
-    max-width: 450px;
-    height: 609px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .modal {
-    min-width: 528px;
-    min-height: 581px;
+    max-width: 528px;
+    height: 581px;
   }
 }
 
