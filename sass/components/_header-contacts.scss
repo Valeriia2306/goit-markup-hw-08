@@ -14,7 +14,9 @@
 
 .contacts__item {
 	@media screen and (min-width: 1200px) {
-		margin-left: 50px;
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
 	}
 
 	&:first-child {
@@ -30,6 +32,8 @@
 	font-weight: 500;
 
 	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		display: flex;
+		align-items: center;
 		font-size: 12px;
 		line-height: 14px;
 		letter-spacing: 0.02em;
@@ -58,10 +62,6 @@
 
 .contacts__icon {
 	fill: currentColor;
-	@media screen and (min-width: 768px) and (max-width: 1199px) {
-		margin-right: 8px;
-	}
-	@media screen and (min-width: 1200px) {
-		margin-right: 10px;
-	}
+	// @media screen and (min-width: 768px) and (max-width: 1199px) {
+	// 	margin-right: 8px;
 }
