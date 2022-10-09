@@ -590,6 +590,7 @@ a {
 .hero__title {
   color: var(--primary-white-color);
   font-family: var(--main-font);
+  font-size: 26px;
   font-weight: 900;
   text-align: center;
   letter-spacing: 0.06em;
